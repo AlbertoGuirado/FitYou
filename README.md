@@ -1,183 +1,183 @@
-# 👕 FitYou – Personaliza, crea, comparte
+# 👕 FitYou – Personalize, Create, Share
 
-**FitYou** es una aplicación móvil desarrollada en **Flutter** para la gestión digital de ropa, inspirada en Vinted. Permite a los usuarios crear su armario virtual, compartir publicaciones de prendas y descubrir contenido de otros usuarios mediante una interfaz moderna e intuitiva.
+**FitYou** is a mobile application developed in **Flutter** for digital clothing management, inspired by Vinted. It allows users to create their virtual wardrobe, share clothing posts, and discover content from other users through a modern and intuitive interface.
 
-*Proyecto universitario desarrollado para la asignatura DSDM-23 (Desarrollo de Software para Dispositivos Móviles)*
-
----
-
-## 🚀 Funcionalidades principales
-
-### 🏠 **Pantalla Principal (Home)**
-- Feed de publicaciones de otros usuarios con algoritmo basado en interacciones
-- Sistema de favoritos con icono de corazón
-- Anuncios patrocinados integrados (pequeños y a pantalla completa)
-- Navegación fluida entre contenidos
-
-### 🔍 **Búsqueda Avanzada**
-- **Búsqueda por texto**: Barra de búsqueda con caracteres
-- **Búsqueda por categorías**: Iconos personalizados para cada tipo de prenda
-- Filtrado inteligente basado en títulos de publicaciones
-- Marcado de favoritos desde resultados de búsqueda
-
-### 👔 **Armario Personal**
-- Subida de ítems desde **galería** o **cámara directa**
-- Gestión completa de publicaciones (crear, editar, eliminar)
-- **Función de recuperación** con patrón Command (deshacer eliminación)
-- Vista en cuadrícula optimizada
-
-### 👤 **Perfil de Usuario**
-- Foto de perfil personalizable
-- Contador de seguidores y seguidos
-- Enlaces a redes sociales
-- Lista de ítems favoritos
-- Estadísticas de publicaciones realizadas
-
-### 🔐 **Autenticación**
-- Registro e inicio de sesión con **Firebase Authentication**
-- Opción de navegación como invitado (solo lectura)
-- Gestión segura de sesiones
+*University project developed for the DSDM-23 course (Mobile Device Software Development)*
 
 ---
 
-## 📋 Estructura de Publicaciones
+## 🚀 Main Features
 
-Cada ítem publicado incluye:
-- **📸 Imagen**: Capturada con cámara o subida desde galería
-- **📝 Título y descripción**: Información detallada de la prenda
-- **🏪 URL de tienda**: Enlace donde encontrar el producto
-- **📏 Talla**: Información de tallas disponibles
-- **💰 Precio**: Precio de referencia encontrado por el usuario
+### 🏠 **Home Screen**
+- User post feed with algorithm based on interactions
+- Favorites system with heart icon
+- Integrated sponsored ads (small and full-screen)
+- Smooth navigation between content
+
+### 🔍 **Advanced Search**
+- **Text search**: Search bar with character input
+- **Category search**: Custom icons for each clothing type
+- Smart filtering based on post titles
+- Mark favorites from search results
+
+### 👔 **Personal Wardrobe**
+- Upload items from **gallery** or **direct camera**
+- Complete post management (create, edit, delete)
+- **Recovery function** with Command pattern (undo deletion)
+- Optimized grid view
+
+### 👤 **User Profile**
+- Customizable profile picture
+- Follower and following counter
+- Social media links
+- Favorite items list
+- Published posts statistics
+
+### 🔐 **Authentication**
+- Registration and login with **Firebase Authentication**
+- Guest navigation option (read-only)
+- Secure session management
 
 ---
 
-## 🛠️ Tecnologías y Arquitectura
+## 📋 Post Structure
 
-### **Stack Tecnológico**
+Each published item includes:
+- **📸 Image**: Captured with camera or uploaded from gallery
+- **📝 Title and description**: Detailed clothing information
+- **🏪 Store URL**: Link where to find the product
+- **📏 Size**: Available size information
+- **💰 Price**: Reference price found by the user
+
+---
+
+## 🛠️ Technologies and Architecture
+
+### **Technology Stack**
 - **Framework**: Flutter (Dart)
 - **Backend**: Firebase Realtime Database
-- **Autenticación**: Firebase Authentication
-- **Almacenamiento**: Firebase Storage (imágenes)
-- **Diseño**: Figma para prototipado y wireframes
+- **Authentication**: Firebase Authentication
+- **Storage**: Firebase Storage (images)
+- **Design**: Figma for prototyping and wireframes
 
-### **Librerías Utilizadas**
-- `CarouselSlider`: Visualización de listas de ítems
-- `ImagePicker`: Captura y selección de imágenes
-- Componentes nativos de Flutter para UI/UX
-
----
-
-## 🏗️ Patrones de Diseño Implementados
-
-### **Principios SOLID**
-- ✅ **Principio Abierto-Cerrado**: Clases que heredan de `StatefulWidget`
-- ✅ **Principio de Sustitución de Liskov**: Herencia correcta en `_ArmarioState`
-- ✅ **Principio DRY**: Reutilización de componentes como botones
-
-### **Patrones de Diseño**
-- 🏗️ **Factory Pattern**: Creación dinámica de widgets según contexto
-- 🎯 **Command Pattern**: Sistema de deshacer acciones (eliminar ítems)
-- 👁️ **Observer Pattern**: Botones que escuchan eventos de UI
-- 🔄 **Singleton Pattern**: Instancia única de `ImagePicker`
-- 📦 **Composite Pattern**: Organización de elementos con `CarouselSlider`
+### **Libraries Used**
+- `CarouselSlider`: Item list visualization
+- `ImagePicker`: Image capture and selection
+- Native Flutter components for UI/UX
 
 ---
 
-## 🧪 Proceso de Diseño y Testing
+## 🏗️ Implemented Design Patterns
 
-### **Metodología de Diseño**
-1. **Wireframing** inicial en Figma
-2. **Maqueta física** a escala real (iPhone 12 Pro)
-3. **Mockups** de alta fidelidad
-4. **Prototipo funcional** en Flutter
-5. **Testing** con usuarios reales
+### **SOLID Principles**
+- ✅ **Open-Closed Principle**: Classes inheriting from `StatefulWidget`
+- ✅ **Liskov Substitution Principle**: Correct inheritance in `_ArmarioState`
+- ✅ **DRY Principle**: Component reusability like buttons
 
-### **Pruebas de Usabilidad**
-Se realizaron **pruebas de guerrilla** con 5+ usuarios reales para evaluar la experiencia.
-
-#### ✅ **Fortalezas identificadas**
-- Diseño atractivo y llamativo (unanimidad)
-- Excelente fluidez y velocidad de respuesta
-- Funcionalidad de cámara bien integrada
-- Interfaz de login muy atractiva
-- Navegación intuitiva
-
-#### ⚠️ **Áreas de mejora**
-- Ajustes de layout para diferentes versiones de Android
-- Competencia en el mercado (análisis competitivo)
-- Indicadores textuales adicionales para funciones de cámara/galería
+### **Design Patterns**
+- 🏗️ **Factory Pattern**: Dynamic widget creation based on context
+- 🎯 **Command Pattern**: Undo action system (delete items)
+- 👁️ **Observer Pattern**: Buttons listening to UI events
+- 🔄 **Singleton Pattern**: Single instance of `ImagePicker`
+- 📦 **Composite Pattern**: Element organization with `CarouselSlider`
 
 ---
 
-## 📱 Capturas y Demo
+## 🧪 Design and Testing Process
 
-### **Flujo de Navegación**
+### **Design Methodology**
+1. Initial **Wireframing** in Figma
+2. **Physical mockup** at real scale (iPhone 12 Pro)
+3. High-fidelity **Mockups**
+4. **Functional prototype** in Flutter
+5. **Testing** with real users
+
+### **Usability Testing**
+**Guerrilla testing** was conducted with 5+ real users to evaluate the experience.
+
+#### ✅ **Identified Strengths**
+- Attractive and appealing design (unanimous)
+- Excellent fluidity and response speed
+- Well-integrated camera functionality
+- Very attractive login interface
+- Intuitive navigation
+
+#### ⚠️ **Areas for Improvement**
+- Layout adjustments for different Android versions
+- Market competition (competitive analysis)
+- Additional text indicators for camera/gallery functions
+
+---
+
+## 📱 Screenshots and Demo
+
+### **Navigation Flow**
 ```
-Inicio → [Registro/Login/Invitado] → Home → [Búsqueda/Armario/Perfil]
+Start → [Register/Login/Guest] → Home → [Search/Wardrobe/Profile]
     ↓
-Subir ítem → [Cámara/Galería] → Formulario → Publicación
+Upload item → [Camera/Gallery] → Form → Publication
     ↓
-Interacción → [Favoritos/Compartir] → Perfil personal
+Interaction → [Favorites/Share] → Personal profile
 ```
 
-### **Enlaces de Recursos**
-- 🎨 **Diseño en Figma**: [Ver prototipo](https://www.figma.com/file/wDTILbYfHaoR0mVtmwOQcm/Untitled?node-id=0%3A1&t=1g9G5DDzSRSOnGuX-1)
-- 📹 **Video demostrativo**: [Ver demo en Google Drive](https://drive.google.com/file/d/1pwhAHsC3yhroIRLOkKmRAIGOKPHwTCnj/view?usp=sharing)
+### **Resource Links**
+- 🎨 **Figma Design**: [View prototype](https://www.figma.com/file/wDTILbYfHaoR0mVtmwOQcm/Untitled?node-id=0%3A1&t=1g9G5DDzSRSOnGuX-1)
+- 📹 **Demo Video**: [View demo on Google Drive](https://drive.google.com/file/d/1pwhAHsC3yhroIRLOkKmRAIGOKPHwTCnj/view?usp=sharing)
 
 ---
 
-## 🚀 Instalación y Configuración
+## 🚀 Installation and Setup
 
-### **Prerrequisitos**
-- Flutter SDK (versión estable)
+### **Prerequisites**
+- Flutter SDK (stable version)
 - Android Studio / VS Code
-- Cuenta de Firebase configurada
-- Dispositivo Android/iOS o emulador
+- Configured Firebase account
+- Android/iOS device or emulator
 
-### **Pasos de instalación**
+### **Installation Steps**
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/AlbertoGuirado/FitYou
 cd fityou
 
-# Instalar dependencias
+# Install dependencies
 flutter pub get
 
-# Configurar Firebase
-# (Seguir documentación oficial de Firebase para Flutter)
+# Configure Firebase
+# (Follow official Firebase for Flutter documentation)
 
-# Ejecutar la aplicación
+# Run the application
 flutter run
 ```
 
 ---
 
-## 👥 Equipo de Desarrollo
+## 👥 Development Team
 
-**Desarrolladores**:
+**Developers**:
 - **Alberto Guirado Fernández**
 - **Álvaro Rosales Zafra** 
-**Año**: 2023
+**Year**: 2023
 
 ---
 
-## 📚 Referencias y Documentación
+## 📚 References and Documentation
 
-### **Documentación Técnica**
+### **Technical Documentation**
 - [Flutter Official Documentation](https://docs.flutter.dev/)
 - [Firebase for Flutter](https://firebase.flutter.dev/)
 - [BLoC Pattern Library](https://bloclibrary.dev)
 
-### **Recursos de Aprendizaje**
+### **Learning Resources**
 - [Flutter Community Medium](https://medium.com/flutter-community)
 - [Flutter YouTube Playlist](https://www.youtube.com/playlist?list=PLl_hIu4u7P677H9f6zPOHiOz2izkvQq2E)
 
 ---
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-Para sugerencias o consultas sobre la implementación, contacta con los desarrolladores originales.
+For suggestions or questions about the implementation, contact the original developers.
 
 ---
 
-*Desarrollado con ❤️ y Flutter*
+*Developed with ❤️ and Flutter*
